@@ -1,12 +1,12 @@
 FROM gitpod/workspace-full-vnc:latest
 
-USER gitpod
+USER root
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install WXPython Dependencies
-RUN sudo apt-get -q update \
-    && sudo apt-get install -yq \
+RUN apt-get -q update \
+    && apt-get install -yq \
         freeglut3-dev \
         python3.7-dev \
         libpython3.7-dev \
@@ -20,6 +20,3 @@ RUN sudo apt-get -q update \
         libxtst-dev \
         libgtk2.0-dev \
     && sudo rm -rf /var/lib/apt/lists/*
-
-# Give control back to gitpod layer
-USER root
