@@ -2,7 +2,7 @@ FROM gitpod/workspace-full-vnc:latest
 
 USER gitpod
 
-ENV DEBIAN_FRONTEND noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install WXPython Dependencies
 RUN sudo apt-get -q update \
