@@ -14,7 +14,7 @@ RUN sudo apt-get -q update \
         libglu1-mesa-dev \
         libgstreamer-plugins-base1.0-dev \
         libgtk-3-dev \
-        ibnotify-dev \
+        libnotify-dev \
         libsdl2-dev \
         libwebkit2gtk-4.0-dev \
         libxtst-dev \
