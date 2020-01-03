@@ -3,7 +3,7 @@ import wx
 
 class MyFrame(wx.Frame):
     def __init__(self):
-        super().__init__(parent=None, title='Note Taking')
+        super().__init__(parent=None, title='Note Taking', pos=wx.Point(0, 0))
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         self.my_btn = wx.Button(panel, label='New Note')
