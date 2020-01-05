@@ -20,3 +20,9 @@ RUN apt-get -q update \
         libxtst-dev \
         libgtk2.0-dev \
     && sudo rm -rf /var/lib/apt/lists/*
+
+# Add wxpython itself
+
+USER gitpod
+
+RUN pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/ wxPython
