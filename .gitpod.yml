@@ -1,6 +1,7 @@
 image:
   file: .gitpod.Dockerfile
 
+# This will expose all necessary ports needed for your VNC image
 ports:
   - port: 6080
     onOpen: open-preview
@@ -9,6 +10,6 @@ ports:
   - port: 35900
     onOpen: ignore
 
+# This will make it so that on workspace start it will run a file called `app.py`
 tasks:
-  - init: pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/ wxPython
-    command: python3 app.py
+  - command: python3 app.py
